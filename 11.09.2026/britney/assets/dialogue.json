@@ -1,3 +1,19 @@
 {
-
+  "changes": {
+    "LogName": "NPC Dialogue",
+    "Target": "Britney",
+    "Entries": {
+      "spring_mon": "What are you up to @!. Need a hand on the farm? Give me a mic and I'll sing you a little tune!",
+      "spring_tue": "Hello @!. What are you doing today? I'm going to practice my vocals!",
+      "spring_wed": "Oh hey there! how have you been? I'm just thinking about my hometown, I miss the big city sometimes.",
+      "spring_thu": "Tending to your crops today @!?",
+      "spring_fri": "Can you believe it's already friday! I can't wait to go into town and see everyone!",
+      "spring_sat": "Today is when I would usually be preforming a concert for millions of people",
+      "spring_sun": "Today is my day off! I'm so excited to spend some time on the farm!",
+      "introduction": "Hello @!. I'm Britney! I'm not from around here, I left the big city to start a new life in a quiet little town! ",
+      "beach": "It's Britney Beach!",
+  "2 heart event": "Hello @!! how are you today? I did some things around the farm for you today, I hope you like it!",
+	"4 heart event":"My loneliness is killing me I must confess, I still believe when I'm not you I lose my mind. Come @! sing it with me! Give me a sign Hit me, baby, one more time!"
+    }
+  }
 }

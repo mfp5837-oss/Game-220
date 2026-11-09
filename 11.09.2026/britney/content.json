@@ -1,0 +1,102 @@
+{
+    "Format": "2.9.1",
+    "Changes":
+    [
+      {
+         		 "LogName": "Blank JSON load",
+              	"Action": "Load",
+                "Target": "Characters/Dialogue/{{ModId}}_Britney, Characters/schedules/{{ModId}}_Britney, Strings/schedules/{{ModId}}_Britney",
+                "FromFile": "assets/britney.json"
+           },
+           {
+               "LogName": "Britney dispositon error!",
+        		 "Action": "Include",
+             "FromFile": "assets/disposition.json"
+          },
+
+
+//portraits
+      {
+        	"LogName": "Base Portraits",
+        	"Action": "Load",
+          "Target": "Portraits/{{ModId}}_Britney",
+          "FromFile": "assets/images/britney_portrait.png"
+   	 },
+//sprites
+     {
+        	"LogName": "Base Sprites",
+        	"Action": "Load",
+          "Target": "Characters/{{ModId}}_Britney",
+          "FromFile": "assets/images/britney_sprites.png"
+     },
+//dialogue
+               {
+             	"LogName": "NPC Dialogue",
+        		 "Action": "Include",
+        		 "FromFile": "assets/dialogue.json"
+           },
+//schedule
+           {
+        	"LogName": "NPC Schedule",
+   		 "Action": "Include",
+   		 "FromFile": "assets/schedule.json"
+      },
+
+//exterior house
+      {
+      "LogName": "Stamping Custom House onto Pelican Town",
+      "Action": "EditMap",
+      "Target": "Maps/Town",
+      "FromFile": "assets/maps/BritneyExterior.tmx",
+      //Grabs the whole exterior starting from the top-left corner
+      "FromArea": {
+        "X": 0,
+        "Y": 0,
+        "Width": 7,
+        "Height": 10
+      },
+      //Pastes exterior down at tile (34, 12) in town using the same dimensions
+    "ToArea": {
+      "X": 7,
+      "Y": 60,
+      "Width": 7,
+      "Height": 10
+    },
+    "Patchmode": "Overlay"
+    },
+
+//interior house
+      //Loads BritneyExterior file into the game's cache
+      {
+        "LogName": "Load Britney House Interior",
+        "Action": "Load",
+        "Target": "Maps/{{ModId}}_BritneyInterior",
+        "FromFile": "assets/maps/BritneyInterior.tmx"
+      },
+      //registers the interior as a recognized in-game locaiton
+      {
+        "LogName": "Add Britney House Location",
+        "Action": "EditData",
+        "Target": "Data/Locations",
+        "Entries": {
+            "{{ModId}}_BritneyInterior": {
+              "DisplayName": "Britney's House",
+              "DefaultArrivalTile": {"X": 2, "Y": 27},
+              "CreateOnLoad": {
+                "MapPath": "Maps/{{ModId}}_BritneyInterior"
+          }
+        }
+      }
+    },
+//entrance warp for Entering Town from BritneyInterior
+    {
+      "LogName": "Entrance Warp to Town",
+      "Action": "EditMap",
+      "Target": "Maps/town",
+      "AddWarps": [
+        "10 69 Maps/{{ModId}}_BritneyInterior 2 26"
+      ]
+    }
+
+  ]
+}

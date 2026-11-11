@@ -1,0 +1,15 @@
+//to warp yourself to inside Britney's House
+debug warp Zoe.GAME220_BritneyInterior
+
+//to warp yourself to the town
+debug warp town
+
+//to reset the day and "sleep" but your character will stay where they are
+debug sleep
+
+//set to a specific time
+debug settime 600
+debug setday 1
+
+Unique ID: Zoe.GAME220
+

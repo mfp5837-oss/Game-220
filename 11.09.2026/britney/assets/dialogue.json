@@ -8,12 +8,12 @@
         "Introduction": "Hello @! I'm Britney! I'm not from around here, I left the big city to start a new life in a quiet little town!",
         "spring_Mon": "What are you up to @!? Need a hand on the farm? Give me a mic and I'll sing you a little tune!",
         "spring_Tue": "Hello @! What are you doing today? I'm going to practice my vocals!",
-        "spring_Wed": "Oh hey there! How have you been? I'm just thinking about my hometown, I miss the big city sometimes.",
+        "spring_Wed": "Oh hey there! How have you been? I'm just thinking about my hometown, #I miss the big city sometimes.",
         "spring_Thu": "Tending to your crops today @!?",
         "spring_Fri": "Can you believe it's already Friday! I can't wait to go into town and see everyone!",
         "spring_Sat": "Today is when I would usually be performing a concert for millions of people.",
-        "spring_Sun": "Today is my day off! I'm so excited to spend some time on the farm!",
-        "Beach": "It's Britney Beach!"
+        "spring_Sun": "Today is my day off! I'm so excited to spend some time on the farm! % How are you doing today @!?",
+        "Beach": "It's Britney Beach! $action emote Britney 40 #Oh hello @! how are you doing? #I'm doing well! I'm just practicing my vocals!"
       }
     }
   ]

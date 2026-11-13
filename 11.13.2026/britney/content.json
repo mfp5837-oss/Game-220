@@ -43,10 +43,12 @@
       },
 
 //exterior house
+    //Patching the New Map In
       {
       "LogName": "Stamping Custom House onto Pelican Town",
       "Action": "EditMap",
       "Target": "Maps/Town",
+      "Patchmode": "Overlay",
       "FromFile": "assets/maps/BritneyExterior.tmx",
       //Grabs the whole exterior starting from the top-left corner
       "FromArea": {
@@ -61,21 +63,21 @@
       "Y": 60,
       "Width": 7,
       "Height": 10
-    },
-    "Patchmode": "Overlay"
+    }
+
     },
 
 //interior house
-      //Loads BritneyExterior file into the game's cache
+      //Creating the New Map (BritneyInterior)
       {
         "LogName": "Load Britney House Interior",
         "Action": "Load",
         "Target": "Maps/{{ModId}}_BritneyInterior",
         "FromFile": "assets/maps/BritneyInterior.tmx"
       },
-      //registers the interior as a recognized in-game location
+      //Creating the Location (registers the interior as a recognized in-game location)
       {
-        "LogName": "Add Britney House Location",
+        "LogName": "Add Britney Interior Location",
         "Action": "EditData",
         "Target": "Data/Locations",
         "Entries": {
@@ -88,11 +90,11 @@
         }
       }
     },
-
+//Adding Warps Between Maps
     {
-      "LogName": "Edit BritneyExterior to add warp into BritneyInterior",
+      "LogName": "Edit Town map to add warp into Britney's House",
       "Action": "EditMap",
-      "Target": "Maps/{{ModId}}_BritneyExterior",
+      "Target": "maps/town",
       "MapTiles": [
         {
           "Position": {"X": 10, "Y": 69},
@@ -101,16 +103,16 @@
             "Action": "LockedDoorWarp 2 26
             {{ModId}}_BritneyInterior 600 2300"
           }
-        }
+       }
       ]
     },
 //entrance warp for Entering Town from BritneyInterior
     {
-      "LogName": "Entrance Warp to Town",
+      "LogName": "Edit BritneyInterior to add warp out of Britney's House",
       "Action": "EditMap",
-      "Target": "Maps/town",
+      "Target": "assets/maps/{{ModId}}_BritneyInterior",
       "AddWarps": [
-        "10 69 Maps/{{ModId}}_BritneyInterior 2 26"
+        "2 27 Maps/Town 10 70"
       ]
     }
   ]

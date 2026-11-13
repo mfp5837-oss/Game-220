@@ -1,0 +1,18 @@
+
+  {
+"Changes":
+	[
+
+   	 {
+          "LogName": "Britney Schedule",
+        	"Action": "EditData",
+          "Target": "Characters/schedules/{{ModId}}_Britney",
+   		    "Entries": {
+
+         "spring": "630 {{ModId}}_BritneyInterior 6 20 2/1600 BritneyInterior 22 16 2",
+         "rain": "800 {{ModId}}_BritneyInterior 22 16 2"
+
+   		 }
+      }
+]
+}

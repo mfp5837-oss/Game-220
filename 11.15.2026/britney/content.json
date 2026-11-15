@@ -52,15 +52,15 @@
       "FromArea": {
         "X": 0,
         "Y": 0,
-        "Width": 7,
-        "Height": 10
+        "Width": 6,
+        "Height": 7
       },
       //Pastes exterior down at tile (7, 60) in town using the same dimensions
       "ToArea": {
-        "X": 7,
-        "Y": 60,
-        "Width": 7,
-        "Height": 10
+        "X": 8,
+        "Y": 62,
+        "Width": 6,
+        "Height": 7
       }
 
     },
@@ -97,7 +97,7 @@
       "Action": "EditMap",
       "Target": "maps/Town",
       "AddWarps": [
-        "9 68 {{ModId}}_BritneyInterior 2 26"
+        "10 68 {{ModId}}_BritneyInterior 2 26"
       ]
     },
     {
@@ -107,7 +107,7 @@
       "MapTiles": [{
         "Position": {
           "X": 10,
-          "Y": 69
+          "Y": 68
         },
         "Layer": "Buildings",
         "SetProperties": {

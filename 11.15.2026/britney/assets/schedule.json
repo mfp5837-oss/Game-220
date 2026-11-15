@@ -1,0 +1,16 @@
+{
+  "Changes": [
+    //FORMAT: Time MapName Xcoord Ycoord Facing Animation StringDialogue
+    //up = 0, right = 1, down = 2, left = 3.
+    {
+      "LogName": "Britney Schedule",
+      "Action": "EditData",
+      "Target": "Characters/schedules/{{ModId}}_Britney",
+      "Entries": {
+        "spring": "610 {{ModId}}_BritneyInterior 22 15 0/830 Town 27 68 2/1130 Beach 34 13 2/1500 Town 98 92 2/2000 Town 13 72 2/2200 {{ModId}}_BritneyInterior 10 7 1",
+        "rain": "800 {{ModId}}_BritneyInterior 22 16 2"
+
+      }
+    }
+  ]
+}
